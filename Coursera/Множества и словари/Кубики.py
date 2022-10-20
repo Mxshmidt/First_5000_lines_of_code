@@ -1,0 +1,15 @@
+inFile = open('input.txt', 'r', encoding='utf-8')
+a, b = map(int, inFile.readline().split())
+ca = set()
+cb = set()
+while len(ca) < a:
+    ca.add(int(inFile.readline()))
+while len(cb) < b:
+    cb.add(int(inFile.readline()))
+print(len(ca & cb))
+print(*sorted(ca & cb))
+print(len(ca - cb))
+print(*sorted(ca - cb))
+print(len(cb - ca))
+print(*sorted(cb - ca))
+inFile.close()

@@ -1,0 +1,9 @@
+print(
+    len(
+        set(
+            open(
+                'input.txt'
+            ).read().strip('\n').split()
+        )
+    )
+)
